@@ -1,0 +1,30 @@
+id: cloud-audit-log
+classes:
+  default-class: audit-log
+  uses:
+    - id: audit-log
+fields:
+  - id: timestamp
+    class-type:
+        - field: event-time
+  - id: authenticationInfo.principalEmail
+    class-type:
+        - field: identity
+  - id: authenticationInfo.principalSubject
+    class-type:
+        - field: identity
+  - id: requestMetadata.callerIp
+    class-type:
+        - field: source-ip
+  - id: methodName
+    class-type:
+        - field: action
+  - id: authorizationInfo[].permission
+    class-type:
+        - field: action
+  - id: resource.type
+    class-type:
+        - field: resource-type
+  - id: authorizationInfo[].resource
+    class-type:
+        - field: resource-name

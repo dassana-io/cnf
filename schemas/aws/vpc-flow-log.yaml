@@ -1,0 +1,45 @@
+id: aws-vpc-flow-log
+classes:
+  default-class: network-flow
+  uses:
+    - id: network-flow
+fields:
+  - id: account-id
+    class-type:
+        - field: account-id
+  - id: srcaddr
+    class-type:
+        - field: source-ip
+  - id: dstaddr
+    class-type:
+        - field: destination-ip
+  - id: srcport
+    class-type:
+        - field: source-port
+  - id: dstport
+    class-type:
+        - field: destination-port
+  - id: protocol
+    class-type:
+        - field: protocol
+  - id: bytes
+    class-type:
+        - field: bytes
+  - id: packets
+    class-type:
+        - field: packets
+  - id: start
+    class-type:
+        - field: start-time
+  - id: end
+    class-type:
+        - field: end-time
+  - id: vpc-id
+    class-type:
+        - field: vpc-id
+  - id: subnet-id
+    class-type:
+        - field: subnet-id
+  - id: flow-direction
+    class-type:
+        - field: direction

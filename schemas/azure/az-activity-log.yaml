@@ -1,0 +1,30 @@
+id: az-activity
+classes:
+  default-class: audit-log
+  uses:
+    - id: audit-log
+fields:
+  - id: eventTimestamp
+    class-type:
+        - field: event-time
+  - id: caller
+    class-type:
+        - field: identity
+  - id: claims.name
+    class-type:
+        - field: identity
+  - id: claims.ipaddr
+    class-type:
+        - field: source-ip
+  - id: authorization.action
+    class-type:
+        - field: action
+  - id: operationName.value
+    class-type:
+        - field: action
+  - id: resourceType.value
+    class-type:
+        - field: resource-type
+  - id: resourceId.value
+    class-type:
+        - field: resource-name

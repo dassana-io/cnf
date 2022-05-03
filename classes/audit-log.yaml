@@ -1,0 +1,14 @@
+id: audit-log
+fields:
+  - id: event-time
+    type: timestamp
+  - id: identity
+    type: string
+  - id: source-ip
+    type: ip-address
+  - id: action
+    type: string
+  - id: resource-type
+    type: string
+  - id: resource-name
+    type: string

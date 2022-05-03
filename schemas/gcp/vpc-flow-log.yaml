@@ -1,0 +1,45 @@
+id: gcp-vpc-flow-log
+classes:
+  default-class: network-flow
+  uses:
+    - id: network-flow
+fields:
+  - id: src_vpc.project_id
+    class-type:
+        - field: account-id
+  - id: connection.src_ip
+    class-type:
+        - field: source-ip
+  - id: connection.src_port
+    class-type:
+        - field: source-port
+  - id: connection.dest_ip
+    class-type:
+        - field: destination-ip
+  - id: connection.dest_port
+    class-type:
+        - field: destination-port
+  - id: connection.protocol
+    class-type:
+        - field: protocol
+  - id: src_vpc.vpc_name
+    class-type:
+        - field: vpc-id
+  - id: src_vpc.subnetwork_name
+    class-type:
+        - field: subnet-id
+  - id: start_time
+    class-type:
+        - field: start-time
+  - id: end_time
+    class-type:
+        - field: end-time
+  - id: bytes_sent
+    class-type:
+        - field: bytes
+  - id: packets_sent
+    class-type:
+        - field: packets
+  - id: reporter
+    class-type:
+        - field: direction

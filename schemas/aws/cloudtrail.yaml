@@ -1,0 +1,27 @@
+id: aws-cloudtrail
+classes:
+  default-class: audit-log
+  uses:
+    - id: audit-log
+fields:
+  - id: eventTime
+    class-type:
+        - field: event-time
+  - id: userIdentity.accountId
+    class-type:
+        - field: identity
+  - id: userIdentity.userName
+    class-type:
+        - field: identity
+  - id: sourceIPAddress
+    class-type:
+        - field: source-ip
+  - id: eventName
+    class-type:
+        - field: action
+  - id: resources[].type
+    class-type:
+        - field: resource-type
+  - id: resources[].arn
+    class-type:
+        - field: resource-name
